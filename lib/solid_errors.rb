@@ -4,6 +4,7 @@ require_relative "solid_errors/version"
 require_relative "solid_errors/subscriber"
 require_relative "solid_errors/engine"
 require_relative "solid_errors/action_controller_base_as_json"
+require_relative "solid_errors/instrument_rake_tasks"
 
 module SolidErrors
   mattr_accessor :connects_to
