@@ -26,7 +26,7 @@ module SolidErrors
 
       error_attributes = {
         exception_class: error.class.name,
-        message: s(error.message),
+        message: error.message,
         severity: severity,
         source: source
       }
@@ -40,12 +40,8 @@ module SolidErrors
       SolidErrors::Occurrence.create(
         error_id: record.id,
         backtrace: error.backtrace.join("\n"),
-        context: s(context)
+        context: context
       )
-    end
-
-    def s(data)
-      Sanitizer.sanitize(data)
     end
 
     def ignore_by_class?(error_class_name)
