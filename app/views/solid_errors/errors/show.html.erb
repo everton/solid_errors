@@ -6,5 +6,5 @@
 <br>
 
 <%= render "solid_errors/occurrences/collection",
-      occurrences: @error.occurrences,
+      occurrences: @error.occurrences.order(created_at: :desc),
       titled: true %>
