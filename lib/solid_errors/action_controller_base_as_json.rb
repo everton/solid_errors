@@ -1,6 +1,6 @@
 module SolidErrors
   module ApplicationControllerBaseAsJson
-    def as_json
+    def as_json(...)
       {
         params: params.to_unsafe_h,
         headers: request.env.select { |k, _v| k.start_with? "HTTP_" },
@@ -8,7 +8,7 @@ module SolidErrors
         assignments: instance_variables.map {
           "#{_1}=#{instance_variable_get(_1).inspect}"
         }
-      }.as_json
+      }.as_json(...)
     end
   end
 end
