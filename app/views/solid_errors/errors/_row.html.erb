@@ -9,7 +9,7 @@
       from
       <em><code><%= error.source %></code></em>
     </div>
-    <pre class="whitespace-pre-wrap ml-6 mt-4"><%= error.message %></pre>
+    <pre class="whitespace-pre-wrap ml-6 mt-4"><%= JSON.pretty_generate(JSON.parse(error.message)) rescue error.message %></pre>
   </td>
   <td scope="col" class="whitespace-nowrap px-3 py-4 pt-7 text-gray-500 text-right">
     <%= error.occurrences_count %>
