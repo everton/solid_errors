@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
   end
 
   # Uncomment to register a new dependency of your gem
-  "8.1.1".tap do |rails_version|
+  "8.1.2".tap do |rails_version|
     spec.add_dependency "actionmailer", rails_version
     spec.add_dependency "actionpack", rails_version
     spec.add_dependency "actionview", rails_version
